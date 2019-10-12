@@ -42,8 +42,7 @@ export default {
     incrementIndex() {
       if (this.index < 9) {
         this.index++;
-      }
-      else {
+      } else {
         this.showScoreInBox = true;
       }
     },
@@ -55,15 +54,15 @@ export default {
     resetAll() {
       this.getQuestions();
       this.index = 0;
-      this.score = 0
+      this.score = 0;
       this.showScoreInBox = false;
     },
     getQuestions() {
       fetch("https://opentdb.com/api.php?amount=10&type=multiple", {
-      method: "get"
-    })
-      .then(response => response.json())
-      .then(jsonData => (this.questions = jsonData.results));
+        method: "get"
+      })
+        .then(response => response.json())
+        .then(jsonData => (this.questions = jsonData.results));
     }
   },
   mounted: function() {
@@ -73,7 +72,7 @@ export default {
 </script>
 
 <style>
-@import './assets/global.css';
+@import "./assets/global.css";
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
