@@ -52,6 +52,7 @@ export default {
       }
     },
     resetAll() {
+      this.questions = [];
       this.getQuestions();
       this.index = 0;
       this.score = 0;
