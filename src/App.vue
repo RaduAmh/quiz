@@ -4,7 +4,7 @@
     <b-container class="bv-example-row">
       <b-row>
         <b-col sm></b-col>
-        <b-col sm="auto">
+        <b-col sm="6">
           <QuestionBox
             :currentQuestion="questions[index]"
             :showScore="showScoreInBox"
